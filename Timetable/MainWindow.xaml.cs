@@ -10,57 +10,37 @@ namespace Timetable
 		{
 			InitializeComponent();
 		}
-
-		private void AuditionCB()
-		{
-			if (tAudition.Text.Trim().Length <= 3)
-			{
-				bAudition.IsEnabled = true;
-			}
-		}
-
-		private void TeacherCB()
-		{
-			if (tTeacher.Text.Trim().Length <= 10)
-			{
-				bTeacher.IsEnabled = true;
-			}
-		}
-
-		private void DisciplineCB()
-		{
-			if (tDiscipline.Text.Trim().Length <= 10)
-			{
-				bDiscipline.IsEnabled = true;
-			}
-		}
-
+        
 		private void AddAudienceClick(object sender, RoutedEventArgs e)
 		{
 			cbAudience.Items.Add(tAudition.Text.Trim());
 			tAudition.Clear();
-			bAudition.IsEnabled = false;
 		}
-
+		
 		private void AddTeacherClick(object sender, RoutedEventArgs e)
 		{
 			cbTeacher.Items.Add(tTeacher.Text.Trim());
 			tTeacher.Clear();
-			bTeacher.IsEnabled = false;
 		}
-
+		
 		private void AddDisciplineClick(object sender, RoutedEventArgs e)
 		{
 			cbDiscipline.Items.Add(tDiscipline.Text.Trim());
 			tDiscipline.Clear();
-			bDiscipline.IsEnabled = false;
 		}
-
+        
 		private void onCreate(object sender, RoutedEventArgs e)
 		{
 			var audience = cbAudience.Text.Trim();
 			var teacher = cbTeacher.Text.Trim();
 			var discipline = cbDiscipline.Text.Trim();
+
+			// Проверить, что все поля ComboBox заполнены
+			if (string.IsNullOrWhiteSpace(audience) || string.IsNullOrWhiteSpace(teacher) || string.IsNullOrWhiteSpace(discipline))
+			{
+				return;
+			}
+
 			var pairNumber = timetable.Items.Count + 1;
 
 			timetable.Items.Add(new TimetableRow(pairNumber, discipline, audience, teacher));

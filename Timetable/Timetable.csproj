@@ -55,6 +55,8 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Compile Include="ComboBoxHandlers.cs" />
+        <Compile Include="TextBoxHandlers.cs" />
         <Compile Include="TimetableRow.cs" />
     </ItemGroup>
     <ItemGroup>

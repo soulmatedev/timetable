@@ -57,22 +57,27 @@
                                     Дисциплина
                                 </TextBlock>
                                 <TextBlock Grid.Row="0" Margin="12 10 34 0" FontStyle="Italic" Opacity="0.6"
-                                           HorizontalAlignment="Right" >
+                                           HorizontalAlignment="Right">
                                     Ауд.
                                 </TextBlock>
-                                <ComboBox Grid.Row="1" Name="cbDiscipline" Margin="10 0 10 22" Width="290" Height="22"
+                                <ComboBox Grid.Row="1" Name="cbDiscipline"
+                                          Margin="10 0 10 22"
+                                          Width="290" Height="22"
                                           HorizontalAlignment="Left">
                                 </ComboBox>
                                 <TextBlock Grid.Row="1" Margin="12 28 0 0" FontStyle="Italic" Opacity="0.6">
                                     Преподаватель
                                 </TextBlock>
-                                <ComboBox Grid.Row="1" Name="cbAudience" Margin="10 0 10 22" Width="50" Height="22"
+                                <ComboBox Grid.Row="1" Name="cbAudience"
+                                          Margin="10 0 10 22" Width="50" Height="22"
                                           HorizontalAlignment="Right">
                                 </ComboBox>
-                                <ComboBox Grid.Row="2" Name="cbTeacher" Margin="10 0 10 0" Width="290" Height="22"
+                                <ComboBox Grid.Row="2" Name="cbTeacher"
+                                          Margin="10 0 10 0" Width="290" Height="22"
                                           HorizontalAlignment="Left">
                                 </ComboBox>
-                                <Button Grid.Row="3" Margin="10" Height="20" Width="350" 
+                                <Button Grid.Row="3" Margin="10" Height="20" Width="350"
+                                        Name="bCreate"
                                         Click="onCreate">
                                     Добавить
                                 </Button>
@@ -94,8 +99,10 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Grid.Row="0" Margin="12 10 10 0" FontStyle="Italic" Opacity="0.6">Дисциплина</TextBlock>
-                                <TextBox Grid.Row="1" Name="tDiscipline" Margin="10 0 10 0" Width="350"></TextBox>
-                                <Button Grid.Row="2" Name="bDiscipline" Margin="10" Height="20" Width="350" 
+                                <TextBox Grid.Row="1" Name="tDiscipline" Margin="10 0 10 0" Width="350"
+                                         TextChanged="tDiscipline_TextChanged">
+                                </TextBox>
+                                <Button Grid.Row="2" Name="bDiscipline" Margin="10" Height="20" Width="350"
                                         Click="AddDisciplineClick">
                                     Добавить
                                 </Button>
@@ -117,8 +124,10 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Grid.Row="0" Margin="12 10 10 0" FontStyle="Italic" Opacity="0.6">Преподаватель</TextBlock>
-                                <TextBox Grid.Row="1" Name="tTeacher" Margin="10 0 10 0" Width="350"></TextBox>
-                                <Button Grid.Row="2" Name="bTeacher" Margin="10" Height="20" Width="350" 
+                                <TextBox Grid.Row="1" Name="tTeacher" Margin="10 0 10 0" Width="350"
+                                         TextChanged="tTeacher_TextChanged">
+                                </TextBox>
+                                <Button Grid.Row="2" Name="bTeacher" Margin="10" Height="20" Width="350"
                                         Click="AddTeacherClick">
                                     Добавить
                                 </Button>
@@ -140,8 +149,10 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Grid.Row="0" Margin="16 10 10 0" FontStyle="Italic" Opacity="0.6">Ауд.</TextBlock>
-                                <TextBox Grid.Row="1" Name="tAudition" Margin="10 0 10 0" Width="350"></TextBox>
-                                <Button Grid.Row="2" Name="bAudition" Margin="10" Height="20" Width="350" 
+                                <TextBox Grid.Row="1" Name="tAudition" Margin="10 0 10 0" Width="350"
+                                         TextChanged="tAudition_TextChanged">
+                                </TextBox>
+                                <Button Grid.Row="2" Name="bAudition" Margin="10" Height="20" Width="350"
                                         Click="AddAudienceClick">
                                     Добавить
                                 </Button>
