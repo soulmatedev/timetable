@@ -1,0 +1,15 @@
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\bin\Debug\Timetable.exe.config
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\bin\Debug\Timetable.exe
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\bin\Debug\Timetable.pdb
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.csproj.AssemblyReference.cache
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.csproj.SuggestedBindingRedirects.cache
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\App.g.cs
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable_MarkupCompile.cache
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.g.resources
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.Properties.Resources.resources
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.csproj.GenerateResource.cache
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.csproj.CoreCompileInputs.cache
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.exe
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\Timetable.pdb
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\MainWindow.baml
+C:\Users\soulmate\RiderProjects\Timetable\Timetable\obj\Debug\MainWindow.g.cs
