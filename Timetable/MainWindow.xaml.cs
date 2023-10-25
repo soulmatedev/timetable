@@ -1,17 +1,28 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace Timetable
 {
 	public partial class MainWindow
-
 	{
-		public MainWindow()
+
+        ObservableCollection<string> audienceObservable = new ObservableCollection<string>();
+        ObservableCollection<string> teacherObservable = new ObservableCollection<string>();
+        ObservableCollection<string> disciplineObservable = new ObservableCollection<string>();
+        Binding audienceBinding = new Binding();
+        Binding teacherBinding = new Binding();
+        Binding disciplineBinding = new Binding();
+        public MainWindow()
 		{
 			InitializeComponent();
-		}
+            audienceBinding.Source = audienceObservable;
+            teacherBinding.Source = teacherObservable;
+            disciplineBinding.Source = disciplineObservable;
+        }
 
 
 		// Не дает создать две одинаковые аудитории
@@ -19,17 +30,15 @@ namespace Timetable
 
 		private void AddAudienceClick(object sender, RoutedEventArgs e)
 		{
-			var newAudience = tAudition.Text.Trim();
+            var newAudience = tAudition.Text.Trim();
 
 			// Проверить, есть ли уже такой элемент в HashSet
 			if (!audienceSet.Contains(newAudience))
 			{
-				// Если нет, добавить его в HashSet и ComboBox
-				audienceSet.Add(newAudience);
-				cbAudience.Items.Add(newAudience);
-			}
-
-			tAudition.Clear();
+                audienceObservable.Add(newAudience);
+            }
+            cbAudience.SetBinding(ComboBox.ItemsSourceProperty, audienceBinding);
+            tAudition.Clear();
 		}
 
 		private void AddTeacherClick(object sender, RoutedEventArgs e)
@@ -46,12 +55,11 @@ namespace Timetable
 				// Проверить, есть ли уже такой элемент в ComboBox
 				if (cbTeacher.Items.IndexOf(teacher) == -1)
 				{
-					// Если нет, добавить его
-					cbTeacher.Items.Add(teacher);
+                    teacherObservable.Add(teacher);
 				}
 			}
-
-			tTeacher.Clear();
+            cbTeacher.SetBinding(ComboBox.ItemsSourceProperty, teacherBinding);
+            tTeacher.Clear();
 		}
 
 		HashSet<string> disciplineSet = new HashSet<string>();
@@ -62,11 +70,10 @@ namespace Timetable
 
 			if (!disciplineSet.Contains(newDiscipline))
 			{
-				disciplineSet.Add(newDiscipline);
-				cbDiscipline.Items.Add(newDiscipline);
+                disciplineObservable.Add(newDiscipline);
 			}
-
-			tDiscipline.Clear();
+            cbDiscipline.SetBinding(ComboBox.ItemsSourceProperty, disciplineBinding);
+            tDiscipline.Clear();
 		}
 
 		private void onCreate(object sender, RoutedEventArgs e)
